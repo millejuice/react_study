@@ -3,49 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Movie from './components/movie.js'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import Detail from './routes/Detail.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
-  //   const [toDo,setToDo] = React.useState("");
-//   const [toDos,setToDos]=React.useState([]);
-  
-// function onChange(event){
-//   setToDo(event.target.value);
-//   console.log(event.target.value)
-// }
-
-// function onSubmit(event){
-//   event.preventDefault();
-//   if(toDo === ""){
-//     return;
-//   }
-//   setToDos((currentArray)=>[toDo,...currentArray]);
-//   setToDo("");
-// }
-// console.log(toDos);
-//   return (
-//     <div className="Movie App">
-//       <h1>My To Dos {toDos.length}</h1>
-//       <form onSubmit={onSubmit}>
-//       <input 
-//       value={toDo}
-//       placeholder='write'
-//       onChange={onChange}
-//       ></input>
-//       <button>Add To Do</button>
-//       </form>
-//       <hr />
-//       <ul>
-//         {toDos.map((toDo, index)=>
-//         (<li key={index}> {toDo}</li>)
-//         )}
-//         {/* map은 toDos에 있는 리스트들 한번씩 선택 가능하게 해준다 array가져와서 li로 구성된 새로운 array마드는 것이다 */}
-//       </ul>
-//     </div>
-//   );
-}
-
+  return <Router>
+  <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path='/movie/:id' element={<Detail />} />
+  </Routes>
+  </Router>;
+  }
+// "/"은 유저가 Home("/")에 있으면 home route를 렌더링 한다는 것
+//:id는 id가 변수명이 되는것이고, 그냥 id만 작성하면 string id가 된다
 root.render(
     <App />
 );

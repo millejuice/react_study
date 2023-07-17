@@ -1,3 +1,6 @@
+import React from 'react'
+import Movie from '../components/movie.js'
+
 function Home(){
     const [loading, setloading]=React.useState(true);
   const [movies,setMovies]=React.useState([]);
@@ -19,6 +22,7 @@ function Home(){
   return <div>
     {loading ? <h1>loading</h1> : 
     movies.map((movie)=><Movie 
+    Id={movie.id}
     ImageUrl={movie.medium_cover_image} 
     title={movie.title} summary={movie.summary} 
     genres={movie.genres}/>)
