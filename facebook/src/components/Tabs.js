@@ -2,12 +2,12 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { blue } from '@mui/material/colors';
 import { SlHome, SlPeople, SlGameController } from "react-icons/sl";
-
+import { Link } from 'react-router-dom';
 
 export default function ColorTabs() {
   const [value, setValue] = React.useState('one');
+  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -35,9 +35,9 @@ export default function ColorTabs() {
           }}
           aria-label="secondary tabs example"
         >
-        <Tab value="home" icon={<SlHome />} />
-        <Tab value="friend" icon={<SlPeople/>} />
-        <Tab value="game" icon={< SlGameController/>} />
+        <Tab value="home" icon={<SlHome />} component={Link} to="/" onChange={handleChange}/>
+        <Tab value="friend" icon={<SlPeople />} component={Link} to='/people' onChange={handleChange} />
+        <Tab value="game" icon={<SlGameController />} component={Link} to='/game' onChange={handleChange} />
       </Tabs>
     </Box>
   );

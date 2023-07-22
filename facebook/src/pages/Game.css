@@ -1,0 +1,15 @@
+.game{
+    background-color: #F0F2F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 950px;
+}
+.gameh1{
+    color: #1877F2;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    font-size: 80px;
+}
