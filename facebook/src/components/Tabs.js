@@ -35,9 +35,9 @@ export default function ColorTabs() {
           }}
           aria-label="secondary tabs example"
         >
-        <Tab value="home" icon={<SlHome />} component={Link} to="/" onChange={handleChange}/>
-        <Tab value="friend" icon={<SlPeople />} component={Link} to='/people' onChange={handleChange} />
-        <Tab value="game" icon={<SlGameController />} component={Link} to='/game' onChange={handleChange} />
+        <Tab value="home" icon={<SlHome />} component={Link} to="/"/>
+        <Tab value="friend" icon={<SlPeople />} component={Link} to='/people' />
+        <Tab value="game" icon={<SlGameController />} component={Link} to='/game' />
       </Tabs>
     </Box>
   );
