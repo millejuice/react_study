@@ -6,7 +6,7 @@ import { SlHome, SlPeople, SlGameController } from "react-icons/sl";
 import { Link } from 'react-router-dom';
 
 export default function ColorTabs() {
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = React.useState('home');
   
 
   const handleChange = (event, newValue) => {
