@@ -2,7 +2,7 @@ const {Configuration, OpenAIApi} = require("openai");
 
 //openAI에서 불러온 configuration으로 openai 객체 만든다
 const configuration = new Configuration({
-    apiKey : "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",
+    apiKey : "Your API Key",
 });
 
 const openai = new OpenAIApi(configuration);
